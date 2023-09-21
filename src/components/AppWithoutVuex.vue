@@ -132,7 +132,7 @@ export default {
           amount: this.amount,
           sum: this.sum,
         },
-        lsStorage: JSON.parse(localStorage.getItem('form')),
+        lsStorage: JSON.parse(sessionStorage.getItem('form')),
       }));
 
       const response = await saveForm({
@@ -147,7 +147,7 @@ export default {
 
       this.events.push(createEvent(EVENT_TYPE_SUBMIT_RESPONSE, {
         response,
-        lsStorage: JSON.parse(localStorage.getItem('form')),
+        lsStorage: JSON.parse(sessionStorage.getItem('form')),
       }));
 
       this.saving = false;

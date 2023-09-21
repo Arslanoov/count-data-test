@@ -68,7 +68,7 @@ export default new Vuex.Store({
           amount: getters.amount,
           sum: getters.sum,
         },
-        lsStorage: JSON.parse(localStorage.getItem('form')),
+        lsStorage: JSON.parse(sessionStorage.getItem('form')),
       }));
 
       const response = await saveForm({
@@ -83,7 +83,7 @@ export default new Vuex.Store({
 
       commit('addEvent', createEvent(EVENT_TYPE_SUBMIT_RESPONSE, {
         response,
-        lsStorage: JSON.parse(localStorage.getItem('form')),
+        lsStorage: JSON.parse(sessionStorage.getItem('form')),
       }));
 
       commit('stopSaving');

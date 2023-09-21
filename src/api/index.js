@@ -4,7 +4,7 @@ export const getForm = async () => {
   await delay(1000);
 
   try {
-    return JSON.parse(localStorage.getItem('form'));
+    return JSON.parse(sessionStorage.getItem('form')) || {};
   } catch (e) {
     return {};
   }
@@ -24,7 +24,7 @@ export const saveForm = async (values = {}) => {
     };
   }
 
-  localStorage.setItem('form', JSON.stringify({
+  sessionStorage.setItem('form', JSON.stringify({
     ...values,
     nonce,
   }));
