@@ -162,10 +162,6 @@ export default {
 
         border: 0.1rem solid #000;
       }
-
-      &__label {
-
-      }
     }
   }
 }
