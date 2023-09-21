@@ -1,14 +1,11 @@
 <template>
-  <AppMenu />
+  <router-view />
 </template>
 
 <script>
-import AppMenu from './components/AppMenu.vue';
-
 export default {
   name: 'App',
   components: {
-    AppMenu,
   },
 };
 </script>
@@ -30,5 +27,9 @@ body {
 *::before,
 *::after {
   box-sizing: inherit;
+}
+
+h2 {
+  font-size: 22px;
 }
 </style>
